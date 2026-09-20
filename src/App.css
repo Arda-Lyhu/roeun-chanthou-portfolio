@@ -1,0 +1,132 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary: #00adb5;
+  --secondary: #0d1117;
+  --accent: #ff6b6b;
+}
+
+/* Font families */
+.font-mono {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.font-code {
+  font-family: "Fira Code", monospace;
+}
+
+/* Animations */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+    opacity: 1;
+  }
+  10% {
+    transform: translate(-2px, 2px);
+    opacity: 0.85;
+  }
+  20% {
+    transform: translate(2px, -2px);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.animate-glitch {
+  animation: glitch 1s linear infinite alternate;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(45deg, #00adb5, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glass morphism */
+.glass {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Neon glow effect */
+.neon-glow {
+  box-shadow: 0 0 20px rgba(0, 173, 181, 0.5);
+}
+
+/* Retro grid background */
+.retro-grid {
+  background-image: linear-gradient(rgba(0, 173, 181, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 173, 181, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typing cursor effect */
+.typing-text::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00adb5;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00979e;
+}
+
+/* Responsive image loading */
+img {
+  max-width: 100%;
+  height: auto;
+}
